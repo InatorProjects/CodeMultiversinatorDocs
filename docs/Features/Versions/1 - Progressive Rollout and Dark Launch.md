@@ -17,14 +17,6 @@ The service will use two databases: Redis for caching experiment data and a pers
 
 This setup enables high performance, scalability, and resilience, accommodating large request volumes with minimal latency while maintaining a backup for system stability. By centralizing group data management in this way, the platform service provides efficient, reliable customer segmentation to enhance user experience across services.
 
-### Controller Service
-
-An additional service will be introduced to act as a Backend for Frontend (BFF) specifically for managing experiments. This BFF service will provide endpoints for creating, editing, and deleting experiment data, ensuring synchronized updates to both Redis (for fast access) and the persistent database (for backup and historical consistency).
-
-In its current version, the interface for this BFF service will be accessible through cURL operations, providing a straightforward way to perform these experiment management tasks. This approach allows easy command-line interaction for development and testing while maintaining direct control over experiment data and its propagation across storage layers.
-
-The BFF’s role is to serve as a dedicated access point for experiment management, streamlining operations and maintaining the integrity and availability of experiment data throughout the system.
-
 ### Real time monitoring
 
 To ensure effective monitoring of dark launches and progressive rollouts, we’ll use **Prometheus** and **Grafana**. Together, these tools provide a comprehensive monitoring and visualization solution that enables real-time insights into our system’s performance.
@@ -39,5 +31,5 @@ Grafana complements Prometheus by offering a powerful visualization layer for ou
 
 ### Architecture Overview
 
-<img src="https://github.com/user-attachments/assets/6d29995d-e941-477e-a700-ce4f26862174">
+<img src="https://github.com/user-attachments/assets/d2ddc496-a765-4818-baf5-833462f1eb9a">
 
